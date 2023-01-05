@@ -1,0 +1,56 @@
+-----Divide and Conquer Algorithm Technique-----
+
+-> Divide the problem into sub-problems recursively
+-> Solve those
+-> Combine the solutions to find the final result
+-> Structure of the sub-problems should be same as the original problem.
+
+Steps: (3-steps)
+-Divide  : break into sub-problems
+-Conquer : Recursively solve sub-problems
+-Combine : Combine the solutions to get final result
+
+Merge Sort:
+-> Divide the array recursively into 2 halves
+-> Until each sub-array contains single element
+-> Merge the sub-array in a sorted array.
+-> merge() function merges two sorted sub-arrays into one
+-> The two arrays are : array[1...n] & array[n+1...r]
+
+-> Merge sort : One of the fastest & most efficient
+-> Best/Worst/Avg time complexity : O(n*logn)
+
+Merge Sort Algorithm:
+-> Mergesort(arr[],i,r)
+-- This is a function which takes three arguments
+-- input array, i-index of 1st element, r-index of last element if r>i
+
+1. Split the array into two halves by finding the middle index. m=(i+r)/2
+2. Call the Mergesort() function for first half.
+    Mergesort(arr[],i,m)   - i(start)   ->  m(middle)
+3. Call the Mergesort() function for second half
+    Mergesort(arr[],m+1,r) - m+1(middle) -> r(end)
+4. Merge the two halves recursively in a sorted manner. 
+    - At last only one sorted array should be left
+    - Use the function : merge(arr[],i,m,r)
+
+- Change in terminalogies: i->beg ; r->end ; m->mid
+
+Working of Merge(arr[],beg,mid,end) function:
+- Merging of 2 sorted sub-arrays
+- arr[beg...mid] & arr[mid+1...end] = arr[beg...end]
+
+Overall Algorithm:
+
+MERGE_SORT(arr,beg,end) {START}
+    if(beg>end)               //checking if size(arr)>1
+        SET mid = (beg+end)/2     //finding the middle index
+        
+        MERGE_SORT(arr,beg,mid)   //first half //Recursively done
+        MERGE_SORT(arr,mid+1,end) //second half // Recursively done
+        
+        MERGE(arr,beg,mid,end)    //After sorting, the sub-arrays are merged
+    end if
+
+Working of MERGE_SORT(arr,beg,mid,end):
+
