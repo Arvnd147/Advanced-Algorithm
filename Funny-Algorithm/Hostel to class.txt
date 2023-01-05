@@ -1,0 +1,29 @@
+Pseudocode for the travel from K Block to SJT-317
+
+START
+1. Get to know on which floor of K-block you're in and come outside.
+2. If (higher than 3rd floor or leg is paining)
+        use lift
+   Else if(floor<3) 
+        use the nearest staircase.
+3. Look for the entrance and walk towards it.
+4. Make sure to wear the ID card(else security won't allow you)
+5. if(own cycle)
+        drive through prp subway or main subway
+   else if(have lot of money)
+        take a shuttle to main gate
+        again take a shuttle from maingate to SJT
+   else if(don't have cycle and don't have money)
+        go by walk(tt subway is the most opitimal one)
+   else
+        go back to room and sleep
+6. Reached SJT entrance.
+   if(not tired)
+        use the nearest staircase
+   if(boy==true)
+        use the boys lift
+   if(girl ==true)
+        use the girls lift
+7. Navigate from your current position to the lab area of 3rd floor.
+8. Come to the last class.(you would have Reached room number 317)
+END
